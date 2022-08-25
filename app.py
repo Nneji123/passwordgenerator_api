@@ -13,12 +13,11 @@ app = FastAPI(
 
 @app.get("/", response_class=PlainTextResponse, tags=["home"])
 async def home():
-    note = """
+    return """
     Password Generator API
     An API for generating strong and secure passwords.
     Note: add "/redoc" to get the complete documentation.
     """
-    return note
 
 
 @app.get("/password", tags=['Password'])
