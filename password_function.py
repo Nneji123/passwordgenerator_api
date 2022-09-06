@@ -33,7 +33,7 @@ def password_generator():
     pre_password = r_digit + r_lowercase + r_uppercase + r_special_char
 
     #To make the password to be 12 character long, we fill the remaining 8 characters with randomly from the combined list.
-    for i in range (min_len - len(pre_password)):
+    for _ in range (min_len - len(pre_password)):
         pre_password = pre_password + random.choice(combined)
         #convert pre_password into array
         password_array = array.array('u', pre_password)
